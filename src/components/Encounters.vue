@@ -15,7 +15,7 @@
 								<Icon v-else width="50px" icon="mdi:pokeball"></Icon>
 							</div>
 							<div class="encounter-name">
-								{{ Lib.toTitleCase(encounter.name) }}
+								<a v-bind:href="'https://www.serebii.net/pokedex-sv/' + encounter.name + '/locations.shtml#'" target="_blank" rel="noopener noreferrer">{{ Lib.toTitleCase(encounter.name) }}</a>
 								<template v-if="team.find((pokemon) => pokemon.name == encounter?.name)"> (Caught) </template>
 							</div>
 							<div class="actions">
